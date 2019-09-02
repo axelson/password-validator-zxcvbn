@@ -1,21 +1,27 @@
 # PasswordValidatorZxcvbn
 
-**TODO: Add description**
+This is a custom validator for [https://github.com/axelson/password-validator/](Password Validator) that implements the [https://github.com/dropbox/zxcvbn](zxcvbn) password scoring algorithm via [https://github.com/techgaun/zxcvbn-elixir/](zxcvbn-elixir).
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `password_validator_zxcvbn` to your list of dependencies in `mix.exs`:
+Add the following to your `deps` list in `mix.exs`
 
 ```elixir
-def deps do
-  [
-    {:password_validator_zxcvbn, "~> 0.1.0"}
-  ]
-end
+{:password_validator_zxcvbn, "~> 0.1.0"},
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/password_validator_zxcvbn](https://hexdocs.pm/password_validator_zxcvbn).
+## Configuration and Usage
 
+```elixir
+iex> opts = [
+...>   additional_validators: [PasswordValidator.Validators.ZXCVBNValidator],
+...>   zxcvbn: [min_score: 4]
+...> ]
+iex> PasswordValidator.validate_password("password", opts)
+{:error, ["This is a top-10 common password"]}
+```
+
+## Known Issues
+
+* Only [https://en.wikipedia.org/wiki/ASCII](ASCII) characters are supported
+  * Upstream issue: https://github.com/techgaun/zxcvbn-elixir/issues/16
