@@ -10,7 +10,14 @@ defmodule PasswordValidatorZxcvbn.MixProject do
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      name: "Password Validator ZXCVBN",
+      docs: [
+        main: "PasswordValidator.Validators.ZXCVBNValidator",
+        canonical: "https://hexdocs.pm/password_validator_zxcvbn"
+      ],
+      source_url: "https://github.com/axelson/password-validator-zxcvbn",
+      homepage_url: "https://github.com/axelson/password-validator-zxcvbn"
     ]
   end
 
