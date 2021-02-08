@@ -54,7 +54,10 @@ defmodule PasswordValidatorZxcvbn.MixProject do
   defp deps do
     [
       {:ex_doc, "~> 0.21", only: :dev, runtime: false},
+      {:dialyxir, "~> 1.0", only: [:dev, :test], runtime: false},
+      {:credo, "~> 1.1", only: [:dev, :test], runtime: false},
       {:password_validator, "~> 0.4"},
+      {:docception, github: "evnu/docception"},
       {:zxcvbn, "~> 0.1.3"}
     ]
   end
