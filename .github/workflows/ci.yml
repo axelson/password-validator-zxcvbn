@@ -20,14 +20,14 @@ jobs:
             otp: 26.2.5
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
     - uses: erlef/setup-elixir@v1
       with:
         otp-version: ${{matrix.otp}}
         elixir-version: ${{matrix.elixir}}
         version-type: "strict"
     - name: Cache build artifacts
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: |
           ~/.hex
