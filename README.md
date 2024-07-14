@@ -7,7 +7,7 @@ This is a custom validator for [https://github.com/axelson/password-validator/](
 Add the following to your `deps` list in `mix.exs`
 
 ```elixir
-{:password_validator_zxcvbn, "~> 0.1.0"},
+{:password_validator_zxcvbn, "~> 0.2.0"},
 ```
 
 ## Configuration and Usage

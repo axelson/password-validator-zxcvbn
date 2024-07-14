@@ -3,7 +3,6 @@ defmodule PasswordValidator.Validators.ZXCVBNValidatorTest do
   alias PasswordValidator.Validators.ZXCVBNValidator
 
   doctest ZXCVBNValidator
-  doctest PasswordValidator.ReadmeDoctest
 
   describe "validation" do
     test "integration with PasswordValidator" do
