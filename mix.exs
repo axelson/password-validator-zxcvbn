@@ -29,7 +29,7 @@ defmodule PasswordValidatorZxcvbn.MixProject do
       name: @app,
       files: ["lib", "mix.exs", "README*", "LICENSE*", "Changelog.md"],
       maintainers: ["Jason Axelson"],
-      licenses: ["Apache 2.0"],
+      licenses: ["Apache-2.0"],
       links: %{"GitHub" => "https://github.com/axelson/password-validator-zxcvbn"}
     ]
   end
